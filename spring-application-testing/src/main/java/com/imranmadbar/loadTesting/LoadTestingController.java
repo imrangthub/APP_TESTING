@@ -12,6 +12,14 @@ public class LoadTestingController {
 
 	@GetMapping("/lts2")
 	public String lts2() {
+		
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		logger.info("Spring Boot  Load testing 2");
 		return "Spring Boot  Load testing 2";
 	}
